@@ -21,7 +21,8 @@ class construct{
 
 int main(){
 
-    construct obj2();
+    
     construct obj1(10,20);
+    construct obj();
     return 0;
 }
