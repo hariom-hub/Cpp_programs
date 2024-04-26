@@ -1,34 +1,29 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-class Parent
-{
+class Base{
 
-public:
-    int num;
-    void printNum()
-    {
-        num = 10;
-        cout << num;
+    public:
+    int value;
+};
+
+class derived: public Base{
+
+    public:
+    int value1;
+
+    void addition(){
+
+        value = 10,value1 = 20;
+
+        cout<<"total = "<<value1+value;
+
     }
 };
 
-class child : public Parent
-{
+int main(){
 
-public:
-    void showNum()
-    {
-        num = 20;
-        cout << num;
-    }
-};
-
-int main()
-{
-
-    child object;
-    object.showNum();
+    derived obj;
+    obj.addition();
     return 0;
 }

@@ -1,28 +1,28 @@
 #include<iostream>
 using namespace std;
 
-class construct{
+class Simple{
 
     public:
+    int data;
 
-    //default constructor
-    construct(){
-        
-        cout<<"hello world";
+    Simple(int value){
+
+        data = value;
+    }
+    void operator ++(){
+
+        ++data;
     }
 
-    //parameterized constructor
-    construct(int a,int b){
-
-        int sum = a+b;
-        cout<<"sum = "<<sum;
+    void show(){
+        cout<<"data = "<<data;
     }
 };
 
 int main(){
 
-    
-    construct obj1(10,20);
-    construct obj();
-    return 0;
+    Simple obj(10);
+    ++obj;
+    obj.show();
 }
